@@ -3,6 +3,107 @@
 [知乎：pandas 在使用时语法感觉很乱，有什么学习的技巧吗？](https://www.zhihu.com/question/289788451/answer/1873472345)
 
 
+### 获取size等信息
+```python
+df.info()
+df.size #df文件所占内存大小
+df.shape[0] #行数
+df.shape[1] #列数
+```
+
+### 从列表新建DataFrame
+```python
+li = [
+    [1, 2, 3, 4],
+    [2, 3, 4, 5]
+]
+
+# DataFRame对象里面包含两个索引， 行索引(0轴， axis=0)， 列索引(1轴， axis=1)
+d1 = pd.DataFrame(data=li, index=['A', 'B'], columns=['views', 'loves', 'comments', 'tranfers'])
+
+```
+
+### 行索引
+```python
+df.loc['indexKey']
+# 索引最后一行
+df.loc[df.shape[0]-1]
+```
+
+### 列索引
+```python
+df['columnKey']
+# 索引最后一列
+df.loc[:,df.shape[1]-1]
+```
+
+### 索引某行某列元素
+```python
+# 关键字索引
+df.loc['indexKey','columnKey']
+# 坐标索引
+df.iloc[i,j]
+```
+
+### 删除行/删除列
+```python
+#删除行
+df.drop(['rowIndex0','rowIndex1'],axis=0)
+# 删除列
+df.drop(['columnKey0','columnKey1'],axis=1)
+```
+
+### 选取行/选取列
+```python
+# 选取行
+df.loc[['rowIndex0','rowIndex1']]
+# 选取列
+df[['columnKey0','columnKey1']]
+```
+
+### 过滤行
+```python
+### 留下columnKey列值为1的行
+df[df['columnKey']==1]
+```
+
+### 使用dataframe绘制折线图
+```python
+import matplotlib.pyplot as plt
+columns = ['confLeftEyeClose','percloseLeftEye','confRightEyeClose','percloseRightEye']
+dataFrames.loc['A'][columns].plot(subplots=True, sharex=True, figsize=(10,10))
+plt.show()
+```
+
+
+### 保存DataFrame
+```python
+# -> Writes to a CSV file
+df.to_csv(filename) 
+
+# -> Writes to a CSV file
+df.to_excel(filename) 
+
+# -> Writes to a SQL table
+df.to_sql(table_name, connection_object) 
+
+# -> Writes to a file in JSON format
+df.to_json(filename) 
+
+# -> Saves as an HTML table
+df.to_html(filename) 
+
+# -> Writes to the clipboard
+df.to_clipboard()
+
+```
+
+### 读取DataFrane
+```python
+# index_col指定index所在列
+dataFrames = pd.read_csv(csv_file,index_col=[0])
+```
+
 ### 修改列名  
 ```python
 df.rename(columns = {'two':'new_name'},inplace=True)
@@ -79,4 +180,41 @@ Out[6]:
 1  A2  B2   K1   K0  C1  D1
 2  A2  B2   K1   K0  C2  D2
 
+```
+
+
+### 增加行
+```python
+df.loc['5']= [16,17,18,19]   # 后面的序列是Iterable就行
+df.at['5']= [16,17,18,19]
+df.set_value('5', df.columns, [16,17,18,19], takeable=False)   # warning，set_value会被取消
+```
+
+### 增加列
+```python
+
+df['columnKey']= 1
+
+df['columnKey']= None
+# 遍历赋值
+for i in range(len(df)):
+    df.iloc[i]['columnKey'] = 0
+```
+
+### split行/分割行
+```python
+df.iloc[i:j]
+```
+
+
+### 重新设置index索引
+当对df进行操作时，如果选取一部分数据，或删除一部分数据后，得到一个新的df1，但是新df1的index仍然使用的原df的index，如果需要重新按照从0开始排序，可增加代码如下：
+```python
+df1.reset_index(drop=True, inplace=True)
+```
+
+### 获取每列的最大值/最小值
+```python
+df.max()
+df.min()
 ```
