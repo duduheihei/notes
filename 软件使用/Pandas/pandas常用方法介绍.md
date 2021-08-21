@@ -65,6 +65,10 @@ df[['columnKey0','columnKey1']]
 ```python
 ### 留下columnKey列值为1的行
 df[df['columnKey']==1]
+
+### 留下columnKey列值为[1,2,3,4]中的一个的行
+df[df['columnKey'].isin([1,2,3,4])]
+
 ```
 
 ### 使用dataframe绘制折线图
@@ -146,7 +150,7 @@ left = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
 right = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3'],
                         'C': ['C0', 'C1', 'C2', 'C3'],
                         'D': ['D0', 'D1', 'D2', 'D3']})
-result = pd.merge(left, right, on='key')
+result = pd.merge(left, right, on='key',how='left)
 
 # on参数传递的key作为连接键
 result
@@ -218,3 +222,34 @@ df1.reset_index(drop=True, inplace=True)
 df.max()
 df.min()
 ```
+
+
+### 获取每列的均值和方差
+```python
+df.mean()
+df.var()
+```
+
+### 获取每列的和
+```python
+df.sum()
+```
+
+### 将多个Series合并为DataFrame
+```python
+s1 = pd.Series([1, 2], index=['A', 'B'], name='s1')
+s2 = pd.Series([3, 4], index=['A', 'B'], name='s2')
+pd.concat([s1, s2], axis=1)
+
+#    s1  s2
+# A   1   3
+# B   2   4
+```
+
+### 排序
+```python
+# 按照reviewerID、unixReviewTime的顺序排列，reviewerID优先级高于unixReviewTime
+sort_values(['reviewerID', 'unixReviewTime'])
+```
+
+
