@@ -46,6 +46,7 @@ df.iloc[i,j]
 ```
 
 ### 删除行/删除列
+注意如果需要就地删除，需要指定参数inplace=True
 ```python
 #删除行
 df.drop(['rowIndex0','rowIndex1'],axis=0)
@@ -252,4 +253,23 @@ pd.concat([s1, s2], axis=1)
 sort_values(['reviewerID', 'unixReviewTime'])
 ```
 
+### 获取列命
+```python
+print(df.columns.values)
+```
 
+
+### 转置
+```python
+df_t = df.T
+```
+
+### dataframe修改列名
+```python
+df.columns = ['columnName1','columnName2','columnName3',...]
+```
+
+### series修改索引名
+```python
+df.index = ['indexName1','indexName2','indexName3',...]
+```

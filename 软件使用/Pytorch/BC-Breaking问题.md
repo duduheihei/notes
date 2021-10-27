@@ -1,0 +1,2 @@
+## BC-breaking: Binary Compatibility Break
+在模型迭代中，经常出现版本不一致导致代码不兼容的问题，比如pytorch不同版本的checkpoint不能正确加载，对此pytorch在Module单元中定义了_version变量，然后将该版本变量保存在checkpoint中，在加载时根据版本号做不同的修改

@@ -1,3 +1,4 @@
+## ptvsd+vscode
 ### 远程和桌面ptvsd安装
 ```python
 pip install ptvsd
@@ -48,3 +49,9 @@ ptvsd.wait_for_attach()
 1. 先运行远程程序
 2. 在本地切换到attach任务
 3. F5即可停在断点出
+   
+## Pycharm
+pycharm专业版本提供了远程调试的功能，[教程链接](https://www.cnblogs.com/xuegqcto/p/8621689.html)  
+注意远程目录的映射  
+设置debug运行脚本和参数传递：菜单Run->Configuration
+![debug](pics/pycharm_remote_debug.png)
