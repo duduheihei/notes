@@ -28,3 +28,7 @@ MiddleBury | null | 72 | 8
 Dataset  数据来源  数据量  有标注的组数
 
 
+## Detection
+### CoCo
+[COCO-detection数据集格式](https://blog.csdn.net/u011627998/article/details/103070302)
+

@@ -26,7 +26,7 @@ target_include_directories(testbed PRIVATE C:/Users/xxx/AppData/Local/Continuum/
 target_include_directories(testbed PRIVATE C:/Users/xxx/AppData/Local/Continuum/anaconda3/envs/torch16/Lib/site-packages/pybind11/include)
 
 ```
-另外需要在项目属性中，修改输出文件的后缀为“.pyd”，类型为“dll”
+另外需要在项目属性中，修改输出文件的后缀为“.pyd”，类型为“dll”：属性-->配置属性-->高级-->高级属性-->目标文件扩展名
 
 ### 简单例子
 ```cpp

@@ -1,0 +1,5 @@
+### pip导出环境
+```
+pip freeze > environment.txt
+pip install -r environment.txts
+```
