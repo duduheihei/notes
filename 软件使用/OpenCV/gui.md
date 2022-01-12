@@ -27,23 +27,3 @@ while True:
         break
 ```
 
-## 直线/曲线绘制
-[基于opencv的直线和曲线拟合与绘制（最小二乘法）](https://blog.csdn.net/guduruyu/article/details/72866144)
-```c++
-//绘制折线图
-cv::Mat img_board = cv::Mat::zeros(480, 640, CV_8UC3);
-img_board.setTo(cv::Scalar(100, 0, 0));
-std::vector<cv::Point> points;
-points.push_back(cv::Point(100., 58.));
-points.push_back(cv::Point(150., 70.));
-points.push_back(cv::Point(200., 90.));
-points.push_back(cv::Point(252., 140.));
-points.push_back(cv::Point(300., 220.));
-points.push_back(cv::Point(350., 400.));
-for (int i = 0; i < points.size(); i++)
-{
-    cv::circle(img_board, points[i], 5, cv::Scalar(0, 0, 255), 2, 8, 0);
-}
-cv::polylines(img_board, points, false, cv::Scalar(0, 255, 0), 1, 8, 0);
-cv::imshow("img_board", img_board);
-```

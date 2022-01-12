@@ -1,5 +1,5 @@
 ## Action Recognition Dataset
-| 数据集 | 动作类型 | 类别个数 | 数据来源 | 数据量 | 发布年份 | 精度 |
+| 数据集 | 动作类型 | 类别个数 | 数据来源 | 数据量 | 发布年份 | Sota精度 |
 |:----:|:------:|:------:|:------:|:------:|:------:|:------:|
 |[UCF101](https://www.crcv.ucf.edu/data/UCF101.php) | 化妆、刷牙、拳击等 | 101 | Youtube | 13,320 | 2012 | 98.69% |
 |[HMDB51](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) | 吃东西、洗头、射击 | 51 | Youtube、公开数据集、电影 | 7000 | 2011 | 85.1% |
@@ -29,6 +29,17 @@ Dataset  数据来源  数据量  有标注的组数
 
 
 ## Detection
+Dataset | 数据来源 | 数据量 | 人数
+--------|------|-----|-------
+CoCo | xxx | xxx | xxx
+VOC | xxx | xxx | xxx
+[WiderFace](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/WiderFace_Results.html) | xxx | xxx | xxx
+
+
 ### CoCo
 [COCO-detection数据集格式](https://blog.csdn.net/u011627998/article/details/103070302)
+
+### WiderFace
+
+
 

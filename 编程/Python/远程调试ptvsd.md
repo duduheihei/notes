@@ -55,3 +55,10 @@ pycharm专业版本提供了远程调试的功能，[教程链接](https://www.c
 注意远程目录的映射  
 设置debug运行脚本和参数传递：菜单Run->Configuration
 ![debug](pics/pycharm_remote_debug.png)
+
+## PDB调试
+利用python的pdb模块进行调试
+[参考博客](https://www.cnblogs.com/xiaohai2003ly/p/8529472.html)
+```
+python -m pdb xxx.py
+```
