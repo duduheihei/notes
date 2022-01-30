@@ -13,6 +13,17 @@ jupyter notebook --generate-config
 c.NotebookApp.notebook_dir = 'D:/project/notebooks'
 ```
 
+## jupyter切换conda环境
+```shell
+#切换到base环境
+conda deacticvate
+#安装nb_conda_kernels
+conda install nb_conda_kernels
+#打开notebook
+jupyter notebook
+```
+![环境切换](pics/jupyter-环境切换.jpg)
+
 ## ubuntu上实现jupyter开启远程服务
 [参考博客](https://blog.csdn.net/wl981292580/article/details/83659154)
 

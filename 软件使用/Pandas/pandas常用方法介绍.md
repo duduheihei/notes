@@ -273,3 +273,7 @@ df.columns = ['columnName1','columnName2','columnName3',...]
 ```python
 df.index = ['indexName1','indexName2','indexName3',...]
 ```
+
+### 常用函数isna,isnull,fillna,unique,groupby,agg,sorted
+
+### 常用属性columns,index,indices,size
