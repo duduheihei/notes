@@ -1,0 +1,1 @@
+[UVmap与mesh关系与理解](https://blog.csdn.net/cgsmalcloud/article/details/114542644)
