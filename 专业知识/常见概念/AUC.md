@@ -9,6 +9,11 @@ FPR = FP / (FP + TN)表示负样本被误检为阳性的概率
 物理意义是：随机取一个正样本和负样本，正样本的logit大于负样本logit的概率
 ![ROC曲线图](pics/ROC.jpg)
 
+### ROC与PR曲线关系
+[参考知乎](https://zhuanlan.zhihu.com/p/140790167)
+1. 如果一条曲线在ROC曲线中压过另一条曲线，那么他在PR曲线中也会相同的全面优于另一条曲线
+2. 如果一条曲线在PR曲线中压过另一条曲线，那么他在ROC曲线中也会相同的全面优于另一条曲线
+
 ### 计算方式
 [博客参考](https://blog.csdn.net/renzhentinghai/article/details/81095857)
 

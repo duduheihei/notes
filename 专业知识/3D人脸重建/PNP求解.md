@@ -1,0 +1,2 @@
+## [一文详解PnP算法原理](https://blog.csdn.net/qq_29462849/article/details/120838218?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1.pc_relevant_default&utm_relevant_index=1)
+PnP(Perspective-n-Point)问题的几何结构如图1所示，给定3D点的坐标、对应2D点坐标以及内参矩阵，求解相机的位姿。

@@ -25,3 +25,6 @@ torch.norm(target_flow-input_flow,p=2,dim=1).mean()
 
 ### 训练调参
 训练光流网络通常学习率的设置远低于其他CNN，一般起始学习率设置为1e-4，终止学习率可以设置到1e-8
+
+### flownet2于pwcnet的区别
+flownet2主要用了stack多个unet网络去refine光流的结果，并且调价了一个针对small displacement的网络对小位移进行预测。PWCNET是在一个Unet网络中的decoder的不同层，都对光流进行refine，其中利用warping操作，将warping复原图像和真实图像同时送入cost volumn layer得到的特征与原特征和上采样的光流一起预测下一scale的光流，具体结构可以参考光流网络

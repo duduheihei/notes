@@ -8,6 +8,9 @@
 |[SomethingSomethingV2](https://20bn.com/datasets/something-something) | x sth x sth | 174 | 未知 | 220,847 | 2018 | 69.6% |
 |[kenetics](https://deepmind.com/research/open-source/kinetics) | 吃东西、洗头、射击 | 400/600/800 | Youtube | 650,000+ | 2020 | 84.9% |
 
+![most popular video action recognitiondatasets](pics/video-action-recognition-dataset.png)
+![A list of popular datasets for video action recognition](pics/video-action-recognition-dataset-table.png)
+
 
 ## Action Detection Dataset
 | 数据集 | 动作类型 | 类别个数 | 数据来源 | 数据量 | 发布年份 | Map |
@@ -34,13 +37,14 @@ Dataset | 数据来源 | 数据量 | 人数
 --------|------|-----|-------
 CoCo | xxx | xxx | xxx
 VOC | xxx | xxx | xxx
-[WiderFace](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/WiderFace_Results.html) | xxx | xxx | xxx
 
 
 ### CoCo
 [COCO-detection数据集格式](https://blog.csdn.net/u011627998/article/details/103070302)
 
 ### WiderFace
+[官网链接](http://shuoyang1213.me/WIDERFACE/)
+从标注文件readme文件得知，标注box信息是，left, top， w, h, blur, expression, illumination, invalid, occlusion, pose
 
 ### Imagenet
 [每个label对应的物体类别](https://blog.csdn.net/winycg/article/details/101722445)
