@@ -12,3 +12,9 @@ tmux new -s taskname
 ```shell
 ctrl+b ctrl+d
 ```
+
+### tmux在mobaXterm下鼠标滚轮失效
+```
+ctrl+b + "[" 使输出静止，然后就可以正常翻页
+继续输出按"q"
+```

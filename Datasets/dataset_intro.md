@@ -41,6 +41,7 @@ VOC | xxx | xxx | xxx
 
 ### CoCo
 [COCO-detection数据集格式](https://blog.csdn.net/u011627998/article/details/103070302)
+iscrowd:[参考这篇](https://zhuanlan.zhihu.com/p/110676412)主要是由于一些密集的同类，很难用一个框进行标注，因此使用一个密集框标注。通常对于该种框，不参与训练和测试
 
 ### WiderFace
 [官网链接](http://shuoyang1213.me/WIDERFACE/)
