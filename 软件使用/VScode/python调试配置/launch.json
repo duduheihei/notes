@@ -1,0 +1,69 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "python": "/opt/miniconda3/envs/mmlab/bin/python",
+      "name": "Python: lauch-file",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceRoot}",
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "7"
+      },
+      "args": [
+        "--target","20220803"
+      ]
+    },
+    {
+      "python": "/home/bqj/miniconda3/envs/mmlab/bin/python",
+      "name": "Python: train-debug",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceRoot}",
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "args": [
+        "./scripts/xxxx/configs/xxxx.py",
+        "--gpu-ids",
+        "0",
+        "--work-dir",
+        "../labs/debug"
+      ]
+    },
+    {
+      "python": "/home/bqj/miniconda3/envs/mmlab/bin/python",
+      "name": "Python: dist-debug",
+      "type": "python",
+      "request": "launch",
+      "program": "/opt/miniconda3/envs/mmlab/lib/python3.7/site-packages/torch/distributed/launch.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceRoot}",
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "7"
+      },
+      "args": [
+        "--nproc_per_node=1",
+        "--master_port=-26789",
+        "./scripts/xxx/train.py",
+        "./scripts/xxx/configs/xxx.py",
+        "--launcher",
+        "pytorch",
+        "--gpu-ids",
+        "0",
+        "--work-dir",
+        "../../../labs/debug",
+        "--seed",
+        "228",
+      ]
+    }
+  ]
+}
+

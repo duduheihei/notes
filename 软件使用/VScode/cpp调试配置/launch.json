@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/media/data8/bqj/project/cpp/adas_vpd/build/testbed",
+            "args": [
+                "4",
+                "/media/data8/bqj/database/adas/vpd/children-detection/train/list_video.txt",
+                "1280"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ],
+    "version": "2.0.0"
+}

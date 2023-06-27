@@ -3,6 +3,9 @@
 [xrdp tab补全](https://blog.csdn.net/ybw123w/article/details/89162156)
 注意，在设置快捷时不要用sudo权限
 
+## ubuntu18.04
+[一键安装](https://blog.csdn.net/weixin_43315707/article/details/107518380)
+
 ### 安装
 ```shell
 #安装xrdp 
@@ -12,7 +15,7 @@ sudo apt-get install vnc4server tightvncserver
 #安装xubuntu-desktop 
 sudo apt-get install xubuntu-desktop 
 #向xsession中写入xfce4-session 
-echo “xfce4-session” >~/.xsession 
+echo “xfce4-session” > ~/.xsession 
 #开启xrdp服务 
 sudo service xrdp restart
 
