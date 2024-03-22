@@ -1,0 +1,1 @@
+[torch RNN不定长输入](https://vl8r.eu/posts/2019/11/23/a-pytorch-rnn-with-variable-sequence-lengths/)
